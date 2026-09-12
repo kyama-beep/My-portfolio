@@ -1,15 +1,20 @@
 (function() {
     // ------------------ REPLACE WITH YOUR CREDENTIALS ------------------
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';      // from EmailJS dashboard
-    const SERVICE_ID = 'YOUR_SERVICE_ID';      // from Email Services
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // from Email Templates
+      const PUBLIC_KEY = 'jhSdza35ERhL4FOKg';
+    const SERVICE_ID = 'service_p4ztpl5';
+    const TEMPLATE_ID = 'template_fvg4ckt';
+
     // ------------------------------------------------------------------
 
     // Initialize EmailJS
-    emailjs.init(PUBLIC_KEY);
+    emailjs.init({PUBLIC_KEY});
 
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('statusMessage');
+    if (!form) {
+        console.error('Contact form not found.');
+        return;
+    }
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
