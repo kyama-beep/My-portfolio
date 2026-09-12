@@ -7,7 +7,7 @@
     // ------------------------------------------------------------------
 
     // Initialize EmailJS
-    emailjs.init({PUBLIC_KEY});
+    emailjs.init({publicKey:PUBLIC_KEY});
 
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('statusMessage');
