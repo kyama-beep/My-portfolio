@@ -42,11 +42,11 @@
         // Disable button to prevent double submission
         const submitBtn = form.querySelector('.btn-submit');
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.innerHTML = 'Sending...';
 
         // Send email
         emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-            .then(function(response) {
+            .then(function() {
                 showStatus('✅ Message sent successfully! I\'ll get back to you soon.', 'success');
                 form.reset();
             })
